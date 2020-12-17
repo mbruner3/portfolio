@@ -21,7 +21,7 @@
             <div class="content">
                 <p style="text-transform: uppercase;">{{ site.description }}</p>
                 <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                    <li><a href="#one" class="button next scrolly">About Me</a></li>
                 </ul>
             </div>
         </div>
@@ -39,13 +39,43 @@
       		<p>I see data science as taking the chaos of data and showing it's beauty through analysis, modeling, visualization, and communication.
             Solving problems for me are opportunities for creativity! This website will be a digital diary of my journey as a data scientist.</p>
       	</div>
+          <div class="inner">
+            <ul class="icons">
+              {% if site.twitter_url %}
+              <li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+              {% endif %}
+              {% if site.googleplus_url %}
+              <li><a href="{{ site.googleplus_url }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
+              {% endif %}
+              {% if site.facebook_url %}
+              <li><a href="{{ site.facebook_url }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+              {% endif %}
+              {% if site.instagram_url %}
+              <li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+              {% endif %}
+              {% if site.pinterest_url %}
+              <li><a href="{{ site.pinterest_url }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
+              {% endif %}
+              {% if site.gitlab_url %}
+              <li><a href="{{ site.gitlab_url }}" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+              {% endif %}
+              {% if site.github_url %}
+              <li><a href="/assets/images/MarkBrunerResume.pdf" class="icon alt fa-file-text fa-2x" target="_blank"><span class="label">Resume</span></a><p>Resume</p></li>
+              {% endif %}
+              {% if site.slack_url %}
+              <li><a href="{{ site.slack_url }}" class="icon alt fa-slack" target="_blank"><span class="label">Slack</span></a></li>
+              {% endif %}
+              {% if site.linkedin_url %}
+              <li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin fa-2x" target="_blank"><span class="label">LinkedIn</span></a><p>LinkedIn</p></li>
+              {% endif %}
+          </div class = "inner">
       </section>
 
       <!-- Two -->
       <section id="two" class="spotlights">
       	<section>
-      		<a href="generic.html" class="image">
-      			<img src="{% link assets/images/desk.png %}" alt="" data-position="center center" />
+      		<a href="/portfolio/" class="image">
+      			<img src="{% link assets/images/hike.png %}" alt="" data-position="center center" />
       		</a>
       		<div class="content">
       			<div class="inner">
@@ -54,14 +84,14 @@
       				</header>
       				<p>Explore the world of data science through my unique projects. I will showcase some of my top work here.</p>
       				<ul class="actions">
-      					<li><a href="/portfolio/" class="button">Learn more</a></li>
+      					<li><a href="/portfolio/" class="button">Portfolio</a></li>
       				</ul>
       			</div>
       		</div>
       	</section>
       	<section>
-      		<a href="generic.html" class="image">
-      			<img src="{% link assets/images/lulu.png%}" alt="" data-position="top center" />
+      		<a href="/blog/" class="image">
+      			<img src="{% link assets/images/zion.png%}" alt="" data-position="top center" />
       		</a>
       		<div class="content">
       			<div class="inner">
@@ -72,7 +102,7 @@
                 recording it here. I learned a long time ago if you want to master a topic, then you should teach it.
                 I might through in the occasional blog about personal interests, you never know!</p>
       				<ul class="actions">
-      					<li><a href="/blog/" class="button">Learn more</a></li>
+      					<li><a href="/blog/" class="button">Blog</a></li>
       				</ul>
       			</div>
       		</div>
