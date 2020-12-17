@@ -16,7 +16,7 @@
 		@include vendor('display', 'flex');
 		@include vendor('justify-content', 'center');
 		@include vendor('pointer-events', 'none');
-		background: transparentize(_palette(bg), 0.1);
+		background: transparentize(_palette(bg), 0.07);
 		box-shadow: none;
 		height: 100%;
 		left: 0;
@@ -66,12 +66,12 @@
 
 					> a:not(.button) {
 						border: 0;
-						border-top: solid 1px _palette(border);
+						border-top: solid 2px _palette(fg-bold);
 						display: block;
-						font-size: 0.8em;
+						font-size: 2em _palette(fg);
 						font-weight: _font(weight-bold);
 						letter-spacing: _font(letter-spacing-alt);
-						line-height: 4em;
+						line-height: 3em;
 						text-decoration: none;
 						text-transform: uppercase;
 					}

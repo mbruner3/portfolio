@@ -1,8 +1,9 @@
 ---
 layout: allposts
-title: All posts
-landing-title: 'All posts'
+title: Blog
+landing-title: 'A Data Science Journey'
 nav-menu: true
+permalink: /blog/
 description: null
 image: null
 author: null

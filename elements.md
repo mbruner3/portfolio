@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Elements
+title: Portfolio
+permalink: /portfolio/
 nav-menu: true
 ---
 
