@@ -1,78 +1,92 @@
 ---
 layout: page
 title: Healthy Cereals? A Dad's Pursuit of Healthy Kid's Cereals
-date: 2020-12-17 9:00
-permalink: /portfolio/healthycereal
-image: assets/images/cereal.jpg
+permalink: /portfolio/healthycereal/
+nav-menu: false
 category: Blog
 ---
+<!-- Main -->
+<div id="main" class="alt">
 
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Healthy Cereal:</h1>
+      <h3>A Dad's Adventure for the Digestive Health of His Children</h3>
+		</header>
+<span><img src="{% link assets/images/cereal_img/adventure.jpg %}" alt=""/></span>
+<!-- Content -->
+<h2 id="content">Gathering the Noble Tools of Health</h2>
+<p>Let us start our pursuit of health with gathering some guidelines from the the USDA, FDA, and other reputable sources.</p>
+<span><img src="{% link assets/images/cereal_img/weapons.png %}" alt=""/>
 
-WHAT MAKES A CEREAL HEALTHY? AN EXPLORATION
--------------------------------------------
+<dl>
+  <dt>
+	<a href="https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar" class="icon fa-fire">  Sugar Content (USDA)</a>
+	</dt>
+	<dd>
+  <li>At most .25 grams of sugar for every 4g of cereal.</li>
+	</dd>
+<hr />
 
-I am using the USDA, FDA, and other reputable sources to determine the
-attributes of a healthy cereal.I will state my assumptions of what is
-considered healthy below and will be using those as a guide for
-determining the types of clusters and to assist my recommendations.
+<dt><a class="icon fa-diamond">  Fiber (<a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf">FoodCorps</a>)</dt>
+<dd>
+<li>At least 3 grams per serving.</li>
+</dd>
 
-**HEALTHY GUIDELINES**
+<hr />
+<dt>Sodium (<a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet">FDA</a>)</dt>
+<dd>
+  <li>Low sodium: <b>5% or less</b> per serving size.</li>
+  <li>High sodium: <b>20% or more</b> per serving size.</li>
+  </dd>
 
--   **Sugar content:** .25g of sugar for every 4g of cereal.
-    -   (**Reference**:
-        <a href="https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar" class="uri">https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar</a>)
--   **Fiber at least 3 grams per serving**
-    -   (**Reference**:
-        <a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf" class="uri">https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf</a>)
--   **Sodium content:**
-    -   Low sodium: 5% or less per serving size
-    -   High sodium: 20% or more per serving size
-    -   (**Reference**:
-        <a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet" class="uri">https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet</a>)
-
-**NOTE** I do not include fat content because fat can be healthy
+<i>
+<br>
+<p>**I do not include fat content because fat can be healthy
 depending on the type which isn’t stated in the data set. Also, vitamins
 are not broken into types in this data set so it is difficult to use that
 as an indicator since many cereals add vitamins.
+</p>
+</i>
+<hr />
+<h2>Are There Any Out-"liars" in Our Way to Truth?</h2>
 
-Here are the **libraries** I used in this project:
-``` r
-library(tidyverse)
-library(caret)
-library(factoextra)
-library(cluster)
-library(fpc)
-library(fastDummies)
-set.seed(15)
-```
-
-Outliers are Informative in this data set
-----------------------------------------
-
-![image](/assets/images/cereal_img/chunk1.png)
-
-After investigating the outliers in this data set, they will be
-informative for clustering. For example, calories and weight outliers
-are the same type of cereals. These cereals all appear on the same shelf
-and have lower ratings in addition to having higher calories and weight
-(see above). Surprisingly, many of them have higher sugar levels
+<span><img src="{% link assets/images/cereal_img/boxplot2.png %}" alt=""/></span>
+<br>
+<br>
+<p>After interrogating the out-"liars" in this data set, I discovered they were telling the truth
+about the cereals they were representing. Two such fellows, let's call them, "Nuts" and "Fruity",
+appear on the same shelf and had a lower customer rating. They also had higher calories and weight.
+Surprisingly, many of them had higher sugar levels
 compared to the other cereals, however, it could be due to the dried
-fruits which adds to the heavier weight of the cereal as well.
+fruits (high in sugar often) and also the nuts which would add to the heavier weight of the cereal.</p>
+<hr />
 
-Possible Relationships in the data set
--------------------------------------
+<h2>Possible Relationships Are Forming On Our Adventure</h2>
 
-![](/assets/images/cereal_img/chunk2.png)
+<span><img src="{% link assets/images/cereal_img/cereal_correlations.png %}" alt=""/></span>
+<br>
+<br>
+<h2>Positive Relationships (Bigger Blue Dots)</h2>
+<dd>
+    <li>Fiber and potassium have a high correlation to one another.</li>
+    <li>Calories to weight and sugar</li>
+    <li>Fiber to protein, potassium, fiber, and rating.</li>
+		</dd>
+		<hr />
 
--   **Positively Correlated**
-    -   Fiber and potassium have a high correlation to one another,
-    -   Calorie to weight and sugar,
-    -   Fiber to protein, potassium, fiber, and rating
--   **Negatively Correlated**
-    -   Rating to calories and sugars
+<h2>Negative Relationships, <i>yeah...we all have them... </i>(Bigger Red Dots)</h2>
+		<dd>
+		    <li> Rating to calories and sugars.</li>
+		    <li>Serving size to fiber and potassium.</li>
+		    <li>Shelf 1 and 2 to shelf 3.</li>
+				</dd>
+				<hr />
 
-## **Summary** <br>
-Most of the significantly correlated variables intuitively
+<hs>Summary</h3>
+<p>Most of the significantly correlated variables intuitively
 makes sense like ratings being positively correlated to fiber as those
 tend to be considered “healthier” cereals and those with higher
 calories/sugars had a lower rating. Also, interestingly it seems shelf 3
@@ -83,10 +97,9 @@ could make sense due to the height of a average child riding in a cart
 or walking in the cereal aisle. I will have to explore below why
 potassium is related to fiber and protein. I found studies on the
 relationship between sodium and potassium but nothing explicitly
-relating it to protein and fiber.
+relating it to protein and fiber.</p>
 
 Determining a value for K.
---------------------------
 
 ![](/assets/images/cereal_img/unnamed-chunk-15-1.png)
 
