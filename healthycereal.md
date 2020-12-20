@@ -23,20 +23,25 @@ category: Blog
 
 <dl>
   <dt>
-	<a href="https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar" class="icon fa-fire">  Sugar Content (USDA)</a>
+	<a href="https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar" class="icon fas fa-dragon">  Sugar Content (USDA)</a>
 	</dt>
 	<dd>
   <li>At most .25 grams of sugar for every 4g of cereal.</li>
 	</dd>
 <hr />
 
-<dt><a class="icon fa-diamond">  Fiber (<a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf">FoodCorps</a>)</dt>
+<dt>
+<a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf" class="icon fas fa-dungeon"> Fiber (FoodCorps)</a>
+</dt>
 <dd>
 <li>At least 3 grams per serving.</li>
 </dd>
 
 <hr />
-<dt>Sodium (<a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet">FDA</a>)</dt>
+<dt>
+<a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet" class="icon  fas fa-tree"> Sodium (FDA)
+</a>
+</dt>
 <dd>
   <li>Low sodium: <b>5% or less</b> per serving size.</li>
   <li>High sodium: <b>20% or more</b> per serving size.</li>
@@ -58,61 +63,36 @@ as an indicator since many cereals add vitamins.
 <br>
 <p>After interrogating the out-"liars" in this data set, I discovered they were telling the truth
 about the cereals they were representing. Two such fellows, let's call them, "Nuts" and "Fruity",
-appear on the same shelf and had a lower customer rating. They also had higher calories and weight.
+appeared on the same shelf and had a lower customer rating. They also had higher calories and weight.
 Surprisingly, many of them had higher sugar levels
 compared to the other cereals, however, it could be due to the dried
 fruits (high in sugar often) and also the nuts which would add to the heavier weight of the cereal.</p>
 <hr />
 
-<h2>Possible Relationships Are Forming On Our Adventure</h2>
+<h1 class="icon fas fa-ghost"> The Variables Meet...</h1>
 
 <span><img src="{% link assets/images/cereal_img/cereal_correlations.png %}" alt=""/></span>
 <br>
 <br>
 <h2>Positive Relationships (Bigger Blue Dots)</h2>
 <dd>
-    <li>Fiber and potassium have a high correlation to one another.</li>
-    <li>Calories to weight and sugar</li>
-    <li>Fiber to protein, potassium, fiber, and rating.</li>
+    <li>Fiber and potassium have a high correlation to one another. The reason being that wheat bran is higher in potassium.</li>
+    <li>Calorie is related to weight because the higher weighted cereals have fruits and nuts. These are higher calorie and weight more.</li>
+		<li>Calorie is also related to sugar. Again this is intuitive since sugar is high in calories.</li>
+    <li>Cereals higher in fiber also are considered healthier and thus have a higher customer rating </li>
 		</dd>
 		<hr />
 
 <h2>Negative Relationships, <i>yeah...we all have them... </i>(Bigger Red Dots)</h2>
 		<dd>
-		    <li> Rating to calories and sugars.</li>
-		    <li>Serving size to fiber and potassium.</li>
-		    <li>Shelf 1 and 2 to shelf 3.</li>
+		    <li> Cereals with higher calories or high sugar have low customer ratings.</li>
+		    <li>Cereals with high fiber have lower serving sizes.</li>
+		    <li>Cereals that appear on shelf 3 have little in common with cereals on shelves 1 and 2 at the grocery store</li>
 				</dd>
 				<hr />
+<h2> The Fellowship of the Means</h2>
 
-<hs>Summary</h3>
-<p>Most of the significantly correlated variables intuitively
-makes sense like ratings being positively correlated to fiber as those
-tend to be considered “healthier” cereals and those with higher
-calories/sugars had a lower rating. Also, interestingly it seems shelf 3
-tends to have cereals with higher levels of potassium, fiber, and
-protein. Shelf 2 seems to have cereals with higher sugar, low amounts of
-protein, lower amounts of fiber. Depending on the height of the shelves
-could make sense due to the height of a average child riding in a cart
-or walking in the cereal aisle. I will have to explore below why
-potassium is related to fiber and protein. I found studies on the
-relationship between sodium and potassium but nothing explicitly
-relating it to protein and fiber.</p>
-
-Determining a value for K.
-
-![](/assets/images/cereal_img/unnamed-chunk-15-1.png)
-
-
-![](/assets/images/cereal_img/unnamed-chunk-15-2.png)
-
-I am going to use the WSS and Silhouette methods to give me a starting
-point for finding optimal k. Often times there is not a “best” approach
-to always optimizing k. I will start analyzing k=6 and see how the
-cereals are grouped and make adjustments if needed from there.
-
-Why I am using Hierachical Clustering
--------------------------------------
+<span><img src="{% link assets/images/cereal_img/fellowship.jpg %}" alt=""/></span>
 
 ### K-means Clustering
 
