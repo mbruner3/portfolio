@@ -90,25 +90,26 @@ fruits (high in sugar often) and also the nuts which would add to the heavier we
 		    <li>Cereals that appear on shelf 3 have little in common with cereals on shelves 1 and 2 at the grocery store</li>
 				</dd>
 				<hr />
-<h2> The Fellowship of the Means</h2>
+<h1> The Fellowship of the Means</h1>
+<p> On my journey I had to determine which clustering algorithm to use. Below is a short description of two different clustering methods.</p>
 
 <span><img src="{% link assets/images/cereal_img/fellowship.jpg %}" alt=""/></span>
 
-### K-means Clustering
+<h3>K-means Clustering</h3>
 
-K-means clustering algorithm is based on the number of clusters you
-choose. For example, let’s say that you want 3 clusters. K-means
-randomly chooses 3 starting points each representing a cluster, then
+<p>K-means clustering algorithm starts with a certain number of random
+points that you can choose, this is called a hyper-parameter. Let’s say
+that you want 3 clusters. K-means randomly chooses 3 starting points each representing a cluster, then
 each of those starting points chooses the closest data point based on a
-distance calculation (see above code). Those two points for each cluster
-forms the 3 new clusters and form a centroid (the average of the two
-points). The algorithm then starts again for choosing a third point to
+distance calculation. Now each of the 3 starting points have another point.
+They have become 3 clusters. The center for each of these clusters is called
+ a centroid (the average of the two points). The algorithm then starts again for choosing a third point to
 add to each cluster and then continues that pattern until all points are
-in each of the 3 clusters.
+in each of the 3 clusters.</p>
 
-### Hierarchical Clustering
+<h3>Hierarchical Clustering</h3>
 
-Hierarchical Clustering can begin with the entire data set, then splits
+<p>Hierarchical Clustering begins with the entire data set, then splits
 into two clusters, and continues splitting into smaller and smaller
 clusters, until all data points are paired with another point or by
 itself. The end of the hierarchical clustering is called leaves and the
@@ -117,11 +118,11 @@ Diversive Analysis Clustering or DIANA.
 
 The other approach is to reverse this process by starting with the
 leaves and reversing the above process until all points are a single
-cluster. This method is called Agglomerative Nesting or AGNES.
+cluster. This method is called Agglomerative Nesting or AGNES.</p>
 
-### Hierarchical Clustering is Better
+<h3>Hierarchical Clustering is Better</h3>
 
-The best method for this problem would be Hierarchical clustering.
+<p>The best method for this problem would be Hierarchical clustering.
 K-Means tends to favor more globular clusters and it only has one method
 on how the clusters are formed. Hierarchical clusters have many more
 methods to control how we can link the data to form the clusters. This
@@ -129,141 +130,12 @@ will be more helpful since I already am very familiar with the types of
 cereals in this data set and inspecting the different methods for
 clustering in the dendrogram will allow me to choose the best way to
 cluster the cereals. I am favoring more control on the clusters that are
-formed.
+formed.</p>
+<hr />
 
-Hierarchical Analysis of Cereals
-================================
-
-Single Linkage: The Worst Linkage
----------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-17-1.png)
-
-
-![](/assets/images/cereal_img/unnamed-chunk-17-2.png)
-
-Cluster 2 contains about 85% of all the cereals. The cereals in that
-cluster are of different types like Trix and Great Grains Pecans. This
-method did not do a good job clustering the cereals to help me recommend
-healthy types of cereals.
-
-Average Linkage: Better than Single
------------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-18-1.png)![](/assets/images/cereal_img/unnamed-chunk-18-2.png)
-
-This linkage method looks very similar to single with the exception of
-the larger cluster having a few small clusters inside of it. It does
-seem to be an improvement over single linkage as there is more cluster
-separation and clusters are more compact, comparatively.
-
-Complete Linkage: Second Best Linkage Method
---------------------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-19-1.png)![](/assets/images/cereal_img/unnamed-chunk-19-2.png)
-
-The clusters look fairly separated and fairly uniformly distributed.
-Cluster 5 overlaps more significantly with 4 and 2. However, looking
-closer at the dendrogram it does seem that it did a good job grouping
-the cereals into like categories.
-
-Ward’s Method: The Best Method
-------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-20-1.png)![](/assets/images/cereal_img/unnamed-chunk-20-2.png)
-
-I think Ward’s is the best method for the cereal recommendations as the
-clusters are more separate and compact (except cluster 3 which overlaps
-5). For only having 73 cereals, I think the above dendrogram does a good
-job of classifying the clusters. For example, All Bran brand cereals are
-in their own cluster and on the same branch as Grape Nuts, Quaker Oat
-Squares, etc… While Corn Pops is with Trix and Fruity Pebbles on it’s
-own branch.
-
-AC Confirms My Analysis
-=======================
-
-**AC Values**
--------------
-
-    ##   average    single  complete      ward
-    ## 0.7775099 0.5767978 0.8426844 0.9002626
-
-I am going with the Ward method due to the visualizations and with the
-strength of the structure being the highest at .90 and due to my
-analysis aligning with these results as well.
-
-Test Partitioning: Clusters have Very Good Stability
-====================================================
-
-### Preparation for Cluster Comparison and Classification
-
-I have to see if the cereals that the algorithm grouped together would still be put together if I took a smaller subset of that data set. If the algorithm still puts the cereals together then the helps give me more confidence that the attributes of the cereals are being grouped together and not random chance.
-
- Ward’s Method on Smaller Subset of Data Set
---------------------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-25-1.png)![](/assets/images/cereal_img/unnamed-chunk-25-2.png)
-
-Cluster Stability Comparison
------------------------------
-
-![](/assets/images/cereal_img/unnamed-chunk-26-1.png)
-
-### Very Good Cluster Stability
-
-Besides looking like a really sweet image...14 of the 37 cereals were classified to the **same cluster
-number** as the original data set. However this is misleading, the
-dendrogram visualization above shows that only 1 cereal was not grouped with the same cereals. This means that
-actually, 32 out of the 36 cereals were clustered the same as the
-original data set. I would say that is pretty good!
-
-Test Partitioning Trial \#2
----------------------------
-
-
-![](/assets/images/cereal_img/unnamed-chunk-29-1.png)![](/assets/images/cereal_img/unnamed-chunk-29-2.png)
-
-![](/assets/images/cereal_img/unnamed-chunk-30-1.png)
-
-18 of the 37 or 49% of the cereals were classified to the **same cluster
-number** as the original data set. However this is misleading again (these graphs try to get you), the
-dendrogram visualization above shows all the cereals were grouped
-with the same cereals as the larger data set. Again that is really good!
-
-AGNES meets DIANA
------------------
-
-One last test of cluster stability is using Diversive Hierarchical
-Clustering and see how it compares to Agglomerative Hierarchical
-Clustering. Again, I am repeating the same process as above so I will
-only show the output.
-
-DIANA Comparison
-----------------
-
-![](/assets/images/cereal_img/unnamed-chunk-31-1.png)![](/assets/images/cereal_img/unnamed-chunk-31-2.png)
-
-### Very Good Cluster Stability, Again!
-
-Performed the DIANA hierarchical clustering and compared it with the
-AGNES hierarchical clustering to see if the clusters are similar for
-both methods which also gives evidence that the clusters are stable.
-Looking above you can see about 51 of the 73 or about 80% cereals were grouped
-the same as AGNES. I believe this gives great evidence of good
-clustering stability as two different clustering algorithms formed
-mostly the same cluster groupings. What this means is that we can
-trust our cluster groupings.
-
-Clustering Stability Conclusion
--------------------------------
-
-I believe that I can high confidence that the clusters are stable based
-on the two trial partition results being very high. Also, DIANA having
-80% cluster similarity, I believe gives even greater confidence due to
-it being a different method for hierarchical clustering but still having
-the majority of clusters groups the same as our original clustering from
-the Ward’s Method using Agnes.
+<h1> My Journey </h1>
+<p> I had many links in my journey. I ended my journey at "Ward's" because it was the best link to
+cluster my cereals. It had the strongest A
 
 Cereal Cluster Analysis
 =======================
