@@ -15,67 +15,64 @@ category: Blog
 			<h1>HEALTHY CEREAL:</h1>
       <h2><i>A Dad's Quest to Find Healthy Cereal for His Kids Using Data Science</i></h2>
 		</header>
-<p> <span class="image left"><img src="{% link assets/images/cereal_img/adventure.jpg %}" alt="" /></span>
-As a dad of two kids, I didn't realize how difficult it was to keep your children <b>"regular"</b>. [<i>If you know what I mean...</i>] My wife and I have struggled to make sure the <b>"pipes are flowing freely"</b> and comfortably. [<i>Again, are you picking up what I am throwing down?</i>] On top of that, finding cereals that my kids will eat regularly is a challenge, and once you find a cereal they like a week later, they are tired of eating it. What could I do to solve this problem? As I thought about it, I realized that I could use my Data Science skills to help my children successfully <b>"drop off the kids at the pool..."</b>. [<i>I had one more euphemism for a bowel movement in me.</i>]</p>
+		<span class="image"><img src="{% link assets/images/cereal_img/adventure.jpg %}" alt="" /></span>
+<p> As a dad of two kids, I didn't realize how difficult it was to keep your children <b>"regular"</b>. [<i>If you know what I mean...</i>] My wife and I have struggled to make sure the <b>"pipes are flowing freely"</b> and comfortably. [<i>Again, are you picking up what I am throwing down?</i>] On top of that, finding cereals that my kids will eat regularly is a challenge, and once you find a cereal they like a week later, they are tired of eating it. What could I do to solve this problem? As I thought about it, I realized that I could use my Data Science skills to help my children successfully <b>"drop off the kids at the pool..."</b>. [<i>I had one more euphemism for a bowel movement in me.</i>]</p>
 
 <p> The post below will assume that you have very little understanding of Data Science. If you are interested in a more technical write-up, including my code, you will find it in a link at the end of our quest together. I created this post for those kindred hearts who are curious about this topic.</p>
 
-<p> I will be using an unsupervised machine learning (ML) algorithm called "Hierarchical Clustering" as my primary weapon on my quest. I will discuss why and what it is later in our journey. Below I briefly describe two types of machine learning algorithms: supervised and unsupervised.</b></p>
-<br>
+<p> I will be using an unsupervised machine learning (ML) algorithm called "Hierarchical Clustering" as my primary weapon on my quest. I will discuss why and what it is later in our journey. Below I briefly describe two types of machine learning algorithms: <b>supervised and unsupervised.</b></p>
 <h3><u>Supervised ML Algorithms</u></h3>
 
-<p><span class="image right"><img src= "https://miro.medium.com/max/1280/1*589X2eXJJkatGRG-z-s_oA.png" alt="Supervised Learning"/></span> Supervised ML algorithms use a subset of the data set to model the problem to be solved. The model's predictive power is then tested on the "unseen" portion of the data set. Based on how the model performs on the unseen data, you would either improve it or decide the model is "good enough." Typically this type of algorithm would be used for making a prediction. Two practical examples are if a bank wanted to know if a person is likely to default on a loan or predicting an increase of a stock portfolio.</p>
-<br>
-<br>
-<br>
+<p><span class="image left"><img src= "https://miro.medium.com/max/1280/1*589X2eXJJkatGRG-z-s_oA.png" alt="Supervised Learning"/></span> Supervised ML algorithms use a subset of the data set to model the problem to be solved. The model's predictive power is then tested on the "unseen" portion of the data set. Based on how the model performs on the unseen data, you would either improve it or decide the model is "good enough." Typically this type of algorithm would be used for making a prediction. Two practical examples are if a bank wanted to know if a person is likely to default on a loan or predicting an increase of a stock portfolio.</p>
+
 <h3><u>Unsupervised ML Algorithms</u></h3>
-<p><span class="image left"><img src= "https://miro.medium.com/max/2232/1*BKvYt1EHtzHOd_HWjm-Jrw.png"  alt="Unsupervised Learning"/></span> These algorithms do not need a smaller subset of the data to train it. The algorithm will take the data in and give you results on the other side without your supervision. Usually, the results will be in the form of groupings of the data called "clusters." The work of the Data Scientist is to analyze the algorithm groupings to draw conclusions about the clusters. A company wanting to do targeted promotions could use an unsupervised ML algorithm to help with this.</p>
-<br>
-<br>
+<p><span class="image right"><img src= "https://miro.medium.com/max/2232/1*BKvYt1EHtzHOd_HWjm-Jrw.png"  alt="Unsupervised Learning"/></span> These algorithms do not need a smaller subset of the data to train it. The algorithm will take the data in and give you results on the other side without your supervision. Usually, the results will be in the form of groupings of the data called "clusters." The work of the Data Scientist is to analyze the algorithm groupings to draw conclusions about the clusters. A company wanting to do targeted promotions could use an unsupervised ML algorithm to help with this.</p>
 <hr />
+
 <!-- Content -->
-<br>
+<section id="two">
+	<div class="inner">
 <header class="major">
 <h2 id="content">GATHERING THE NOBLE TOOLS OF HEALTH</h2>
 </header>
-<p><span class="image left"><img src="{% link assets/images/cereal_img/weapons.png %}" alt="Exploratory Data Analysis"  alt="Unsupervised Learning"/></span>Before we begin our quest, we need to make sure we have the right supplies. Below you will find the "supplies" I am bringing on our quest. These "supplies" are recommendations for healthy levels of sugar, fiber, and sodium.</p>
-<span>
-<br>
-<br>
-<br>
+<span class="image"><img src="{% link assets/images/cereal_img/weapons.png %}" alt="Exploratory Data Analysis"  alt="Unsupervised Learning"/></span>
+Before we begin our quest, we need to make sure we have the right supplies. Below you will find the "supplies" I am bringing on our quest. These "supplies" are recommendations for healthy levels of sugar, fiber, and sodium.
 <dl>
   <dt>
+	<br>
 	<a href="https://www.fns.usda.gov/tn/choose-breakfast-cereals-are-lower-sugar" class="icon fas fa-first-aid">  Sugar Content (USDA)</a>
 	</dt>
-	<dd>
-  <li>At most .25 grams of sugar for every 4g of cereal.</li>
-	</dd>
-<br>
-<dt>
-<a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf" class="icon fas fa-toilet-paper"> Fiber (FoodCorps)</a>
-</dt>
-<dd>
-<li>At least 3 grams per serving.</li>
-</dd>
-<br>
-<dt>
-<a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet" class="icon  fas fa-pizza-slice"> Sodium (FDA)
-</a>
-</dt>
-<dd>
-  <li>Low sodium: <b>5% or less</b> per serving size.</li>
-  <li>High sodium: <b>20% or more</b> per serving size.</li>
-  </dd>
-
-<i>
-<br>
-<p><b>Note</b>: I do not include fat content because fat can be healthy
-depending on the type which isn’t stated in the data set. Also, vitamins
-are not broken into types in this data set so it is difficult to use that
-as an indicator since many cereals add vitamins.
-</p>
-</i>
+		<dd>
+  		<li>At most .25 grams of sugar for every 4g of cereal.</li>
+		</dd>
+			<br>
+				<dt>
+					<a href="https://foodcorps.org/cms/assets/uploads/2018/01/Healthy-School-Program-Resource-Guide-1-11.pdf" class="icon fas fa-toilet-paper"> Fiber (FoodCorps)</a>
+				</dt>
+			<dd>
+		<li>At least 3 grams per serving.</li>
+			</dd>
+				<br>
+		<dt>
+			<a href="https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet" class="icon  fas fa-pizza-slice"> Sodium (FDA)</a>
+		</dt>
+		<dd>
+  		<li>Low sodium: <b>5% or less</b> per serving size.</li>
+  		<li>High sodium: <b>20% or more</b> per serving size.</li>
+		</dd>
+		<br>
+		<i>
+		<p><b>Note</b>: I do not include fat content because fat can be healthy
+		depending on the type which isn’t stated in the data set. Also, vitamins
+		are not broken into types in this data set so it is difficult to use that
+		as an indicator since many cereals add vitamins.
+		</p>
+		</i>
+</dl>
 <hr />
+
+<section id="three">
+	<div class="inner">
 <header class="major">
 <h2>DETECTING THE OUT-"LIARS"</h2>
 </header>
@@ -95,7 +92,7 @@ as an indicator since many cereals add vitamins.
     <li>Fiber and potassium have a high correlation to one another. The reason being that wheat bran is higher in potassium.</li>
     <li>Calories is related to weight because the higher weighted cereals have fruits and nuts.</li>
 		<li>Calories is also related to sugar. Again this is intuitive since sugar is high in calories.</li>
-    <li>Cereals higher in fiber also are considered healthier and thus have a higher customer rating </li>
+    <li>Cereals higher in fiber also are considered healthier and thus have a higher customer rating. </li>
 		</dd>
 		<hr />
 
@@ -103,11 +100,14 @@ as an indicator since many cereals add vitamins.
 		<dd>
 		    <li>Cereals with higher calories or high sugar have low customer ratings.</li>
 		    <li>Cereals with high fiber have lower serving sizes.</li>
-		    <li>Cereals that appear on shelf 3 have little in common with cereals on shelves 1 and 2 at the grocery store</li>
+		    <li>Cereals that appear on shelf 3 have little in common with cereals on shelves 1 and 2 at the grocery store.</li>
 				<br>
 				<i>[If you picture yourself going down the cereal aisle with a children strapped into the shopping cart, then all will become clear on what cereals are positioned on shelves 1 and 2...]</i>
 				</dd>
 				<hr />
+				</div>
+				</section>
+
 <header class="major">
 <h2>THE FELLOWSHIP OF THE CLUSTERS</h2>
 </header>
