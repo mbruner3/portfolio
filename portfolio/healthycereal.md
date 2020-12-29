@@ -5,9 +5,9 @@ permalink: /portfolio/healthycereal.html
 nav-menu: false
 category: Page
 ---
-<!DOCTYPE html>
+
 <!-- Main -->
-<div id="main" class="alt">
+<div id="main">
 
 <!-- One -->
 <section id="one">

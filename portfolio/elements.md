@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Portfolio
-permalink: /portfolio.html
-nav-menu: false
+title: Elements
+permalink: /elements.html
+nav-menu: true
 ---
 
 <!-- Main -->

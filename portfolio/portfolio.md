@@ -5,9 +5,9 @@ permalink: /portfolio/
 nav-menu: true
 category: Page
 ---
-<!DOCTYPE html>
+
 <!-- Main -->
-<div id="main" class="alt">
+<div id="main">
 
       <!-- Banner -->
     <section id="portfoliobanner" class="major">
