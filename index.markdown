@@ -12,7 +12,7 @@ show_tile: false
 <div id="main">
 
 <!-- Banner -->
-<section id="banner" class="major" markdown = "1">
+<section id="banner" class="major">
   <div class="inner">
       <header class="major">
           <h1>Mark Bruner</h1>
@@ -39,7 +39,7 @@ show_tile: false
           </p>
       	</div>
 
-          <div class="inner" markdown = "1">
+          <div class="inner">
             <ul class="icons">
               {% if site.twitter_url %}
               <li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
@@ -68,7 +68,7 @@ show_tile: false
               {% if site.linkedin_url %}
               <li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin fa-2x" target="_blank"><span class="label">LinkedIn</span></a><p>LinkedIn</p></li>
               {% endif %}
-              </div>
+
 
 
       <!-- Two -->
