@@ -4,7 +4,7 @@ subtitle:
 email: markdbruner@gmail.com
 description: A Pursuit of Data Science for the Good of the World.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: markbruner.io
+url: https://markbruner.io
 author: Mark
 street_address:
 city: Kent
