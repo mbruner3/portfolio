@@ -72,7 +72,6 @@ show_tile: false
 
 
       <!-- Two -->
-
       <section id="two" class="spotlights">
       <section>
       		<a href="/portfolio/" class="image">
