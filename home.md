@@ -1,11 +1,9 @@
 ---
-layout: home
-title: Home
-landing-title: 'Mark Bruner'
-description: null
-image: null
-author: null
-show_tile: false
+title: Landing
+layout: landing
+description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+image: assets/images/pic07.jpg
+nav-menu: false
 ---
 
 <!-- Main -->
@@ -105,4 +103,3 @@ show_tile: false
       					<li><a href="/blog/" class="button">Blog</a></li>
       				</ul>
       			</div>
-      		</div>
