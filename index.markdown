@@ -7,7 +7,7 @@ image: null
 author: null
 show_tile: false
 ---
-<!DOCTYPE html>
+
 <!-- Main -->
 <div id="main">
 
@@ -38,7 +38,6 @@ show_tile: false
               Please don't hesitate to reach out to me with any questions or comments. Enjoy your time here!
           </p>
       	</div>
-
           <div class="inner">
             <ul class="icons">
               {% if site.twitter_url %}
@@ -68,7 +67,9 @@ show_tile: false
               {% if site.linkedin_url %}
               <li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin fa-2x" target="_blank"><span class="label">LinkedIn</span></a><p>LinkedIn</p></li>
               {% endif %}
-
+            </ul>
+          </div>
+        </section>
 
 
       <!-- Two -->
@@ -107,3 +108,4 @@ show_tile: false
       					<li><a href="/blog/" class="button">Blog</a></li>
       				</ul>
       			</div>
+            </div>

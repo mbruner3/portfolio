@@ -2,7 +2,7 @@
 layout: page
 title: Elements
 permalink: /elements.html
-nav-menu: true
+nav-menu: false
 ---
 
 <!-- Main -->
