@@ -1,9 +1,8 @@
 ---
-title: Landing
-layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
-image: assets/images/pic07.jpg
-nav-menu: false
+layout: home
+title: Home
+nav-menu: true
+category: Page
 ---
 
 <!-- Main -->
@@ -17,7 +16,7 @@ nav-menu: false
       </header>
       <div class="content">
           <ul class="actions">
-              <li><a href="#one" class="button scrolly">My Projects</a></li>
+              <li><a href="#one" class="button scrolly">About</a></li>
           </ul>
       </div>
   </div>
@@ -67,7 +66,7 @@ nav-menu: false
               {% endif %}
 
       <!-- Two -->
-
+<div>
       <section id="two" class="spotlights">
       <section>
       		<a href="/portfolio/" class="image">
@@ -103,3 +102,4 @@ nav-menu: false
       					<li><a href="/blog/" class="button">Blog</a></li>
       				</ul>
       			</div>
+</div>
