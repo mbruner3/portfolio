@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Portfolio
-permalink: /portfolio/
+title: Blog
+permalink: /blog/
 nav-menu: true
 category: Page
 ---
@@ -13,39 +13,36 @@ category: Page
     <section id="portfoliobanner" class="major">
         <div class="inner">
             <header class="major">
-                <h1>Portfolio</h1>
+                <h1>Blog</h1>
             </header>
             <div class="content">
                 <ul class="actions">
-                    <li><a href="#one" class="button scrolly">My Projects</a></li>
+                    <li><a href="#one" class="button scrolly">My Posts</a></li>
                 </ul>
             </div>
         </div>
     </section>
-
       <!-- One -->
       <section id="one" class="spotlights">
       	<section>
-      		<a href="/portfolio/healthycereals.html" class="image">
+      		<a href="/blog/cereals.html" class="image">
       			<img src="{% link assets/images/cereal.jpg %}" alt="" data-position="center center" />
       		</a>
       		<div class="content">
       			<div class="inner">
       				<header class="major">
-      					<h3>
-                  <a href="/portfolio/healthycereals.html">Hierarchical Clustering</a>
-                  </h3>
+      					<h3><a href="/blog/cereals.html">A Quest for Healthy Cereals</a></h3>
       				</header>
       				<p>What if you wanted your children to eat healthier cereals? What if they were not eating enough fiber?
               I sought to find cereals that my kids would eat. You will
-            be surprised by the cereals that I do and don't recommend! </p>
+            be surpised by the cereals that I do and don't recommend! </p>
       				<ul class="actions">
-      					<li><a href="/portfolio/healthycereals.html" class="button">Healthy Cereal</a></li>
+      					<li><a href="/blog/cereals.html" class="button">Healthy Cereal</a></li>
       				</ul>
       			</div>
       		</div>
       	</section>
-      	<section>
+      	<!--section>
       		<a href="/blog/" class="image">
       			<img src="{% link assets/images/zion.png%}" alt="" data-position="top center" />
       		</a>
@@ -62,7 +59,7 @@ category: Page
       				</ul>
       			</div>
       		</div>
-      	</section>
+      	</section-->
       </section>
 
-      </div>
+  </div>

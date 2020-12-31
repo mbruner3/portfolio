@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Mark'
+permalink:
 description: null
 image: null
 author: null
@@ -81,7 +81,9 @@ show_tile: false
       		<div class="content">
       			<div>
       				<header class="major">
-      					<h3>My Portfolio</h3>
+      					<h3>
+                  <a href="/portfolio/">My Portfolio</a>
+                </h3>
       				</header>
       				<p>Explore the world of data science through my passions.
                 My projects will focus mainly on solving practical problems, wrestling with injustice, and environmental issues.
@@ -99,7 +101,9 @@ show_tile: false
       		<div class="content">
       			<div>
       				<header class="major">
-      					<h3>My Blog</h3>
+      					<h3>
+                  <a href="/blog/">My Blog</a>
+                  </h3>
       				</header>
       				<p>Learn about data science as I learn about data science. I am taking all of the knowledge that I have learned and recording it here.
                 As a teacher, I realized that if you want to master a topic, then teach it to others.
