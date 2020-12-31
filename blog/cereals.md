@@ -74,7 +74,7 @@ Before we begin our quest, we need to make sure we have the right supplies. Belo
 		<li>This next one will be real surprising, the high sugar cereals had high calories! (Bet you didn't see that coming...)</li>
 		<li>Cereals in the grocery store that appear on the third shelf have little in common with cereals on the first and second shelf at the grocery store.</li>
 				<br>
-				<i>[If you picture yourself going down the cereal aisle with a children strapped into the shopping cart or walking beside the cart, then you can guess what kind of cereals are positioned on shelves 1 and 2...]</i>
+				<i>[If you picture yourself going down the cereal aisle with one or more children strapped into the shopping cart or walking beside the cart, then you can guess what kind of cereals are positioned on shelves 1 and 2...]</i>
 				</dd>
 				<hr />
 
