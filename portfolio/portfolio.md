@@ -45,7 +45,7 @@ category: Page
       			</div>
       		</div>
       	</section>
-      	<section>
+      	<!--section>
       		<a href="/blog/" class="image">
       			<img src="{% link assets/images/zion.png%}" alt="" data-position="top center" />
       		</a>
@@ -62,7 +62,7 @@ category: Page
       				</ul>
       			</div>
       		</div>
-      	</section>
+      	</section-->
       </section>
 
       </div>
